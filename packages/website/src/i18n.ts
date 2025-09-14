@@ -31,9 +31,12 @@ export const getI18nInstance = cache(async () => {
   if (cachedI18N) return cachedI18N;
 
   const { messages } = await import(`./locales/${locale}.po`);
+  const { messages: reactComponentsMessages } = await import(
+    `@company/react-components/locales/${locale}`
+  );
   const i18n = setupI18n({
     locale,
-    messages: { [locale]: messages },
+    messages: { [locale]: { ...messages, ...reactComponentsMessages } },
   });
 
   i18nCache.set(locale, i18n);

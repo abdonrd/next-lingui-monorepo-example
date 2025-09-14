@@ -1,2 +1,4 @@
+.swc/
 dist/
 node_modules/
+src/locales/*.ts
