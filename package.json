@@ -1,0 +1,17 @@
+{
+  "name": "next-lingui-monorepo-example",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {},
+  "prettier": {
+    "singleQuote": true
+  },
+  "engines": {
+    "node": "^22.18.0"
+  }
+}
